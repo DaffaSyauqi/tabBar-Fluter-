@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Tab(icon: Icon(Icons.photo_library)),
               Tab(icon: Icon(Icons.calculate)),
             ]),
-            title: Text("Tab Bar"),
+            title: const Text("Tab Bar"),
           ),
           body: TabBarView(
             children: [
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           Positioned(
             child: Container(
-              width: 195,
+              width: 200,
               height: 775,
               color: Colors.blue,
               child: Column(children: [
@@ -178,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Positioned(
-            right: -20.0,
+            right: 20.0,
             top: 30.0,
             child: Container(
               width: 195,
@@ -285,8 +285,65 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      Text('cacat'),
-      Text('cacat'),
+      Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: Column(
+                    children: [
+                      Text(
+                        'Galeri Foto',
+                        style: TextStyle(
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 30.0),
+                      Wrap(
+                        spacing: 8.0,
+                        runSpacing: 8.0,
+                        children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width / 3 - 12.0,
+                            height: MediaQuery.of(context).size.width / 3 - 12.0,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('assets/galeri1.jpeg'),
+                                fit: BoxFit.cover,
+                              ),
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width / 3 - 12.0,
+                            height: MediaQuery.of(context).size.width / 3 - 12.0,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('assets/image1.jpg'),
+                                fit: BoxFit.cover,
+                              ),
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width / 3 - 12.0,
+                            height: MediaQuery.of(context).size.width / 3 - 12.0,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('assets/image2.jpg'),
+                                fit: BoxFit.cover,
+                              ),
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+      Text('test'),
             ],
           ),
       ),

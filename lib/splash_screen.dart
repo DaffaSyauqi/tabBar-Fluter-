@@ -12,7 +12,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // Simulate a long-running task, e.g., loading resources
     Future.delayed(Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
